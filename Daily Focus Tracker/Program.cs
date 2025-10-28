@@ -29,7 +29,7 @@ namespace Daily_Focus_Tracker
         {
             this.Text = "Daily Focus Tracker";
             this.Width = 600;
-            this.Height = 450; // lite högre för nya placeringar
+            this.Height = 450; // lite högre för layouten
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -94,32 +94,33 @@ namespace Daily_Focus_Tracker
             timerLabel = new Label
             {
                 Text = "25:00",
-                Top = 10,
+                Top = 20,               // flyttad lite ner
                 Left = 300,
                 Width = 250,
-                Font = new Font("Segoe UI", 30, FontStyle.Bold),
+                Height = 80,            // högre så hela texten syns
+                Font = new Font("Segoe UI", 28, FontStyle.Bold),
                 ForeColor = Color.DarkBlue,
                 TextAlign = ContentAlignment.MiddleCenter
             };
             this.Controls.Add(timerLabel);
 
-            // Progress bar längre ner
+            // Progress bar
             progressBar = new ProgressBar
             {
-                Top = 100,
+                Top = 120,              // längre ner
                 Left = 300,
                 Width = 250,
-                Height = 30,
+                Height = 25,
                 Minimum = 0,
                 Maximum = FocusDuration
             };
             this.Controls.Add(progressBar);
 
-            // Start och Stop knappar längre ner
+            // Start-knapp
             startBtn = new Button
             {
                 Text = "Start Focus",
-                Top = 150,
+                Top = 160,
                 Left = 300,
                 Width = 100,
                 BackColor = Color.LightSkyBlue
@@ -134,6 +135,7 @@ namespace Daily_Focus_Tracker
             };
             this.Controls.Add(startBtn);
 
+            // Stop-knapp
             stopBtn = new Button
             {
                 Text = "Stop",
